@@ -1,0 +1,1 @@
+My personal website designated 'exhibition' since its put on airs and strange curiousities on display.
