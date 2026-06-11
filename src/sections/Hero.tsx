@@ -14,7 +14,7 @@ export default function Hero() {
         <p className="text-neutral-300 max-w-xl leading-relaxed mb-10 text-lg">
           {profile.bio}
         </p>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-3">
           <a
             href={profile.githubUrl}
             target="_blank"
@@ -28,17 +28,11 @@ export default function Hero() {
               href={profile.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 rounded transition-colors text-sm"
+              className="px-5 py-2.5 border border-neutral-700 hover:border-emerald-600 text-neutral-300 hover:text-emerald-400 rounded transition-colors text-sm"
             >
               LinkedIn
             </a>
           )}
-          <a
-            href="#contact"
-            className="px-5 py-2.5 border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 rounded transition-colors text-sm"
-          >
-            Get in touch
-          </a>
         </div>
       </div>
     </section>

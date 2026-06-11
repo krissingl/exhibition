@@ -1,5 +1,15 @@
 import { profile } from '../data/profile'
 
+function ExternalLinkIcon() {
+  return (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
+    </svg>
+  )
+}
+
 function GitHubIcon() {
   return (
     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current shrink-0" aria-hidden="true">
@@ -42,8 +52,8 @@ export default function Contact() {
               <div className="text-sm font-semibold text-neutral-100">GitHub</div>
               <div className="text-xs text-neutral-500 font-mono">@{githubHandle}</div>
             </div>
-            <span className="ml-auto text-neutral-600 group-hover:text-emerald-400 transition-colors text-sm">
-              ↗
+            <span className="ml-auto text-neutral-600 group-hover:text-emerald-400 transition-colors">
+              <ExternalLinkIcon />
             </span>
           </a>
 
@@ -60,8 +70,8 @@ export default function Contact() {
               <div className="text-sm font-semibold text-neutral-100">LinkedIn</div>
               <div className="text-xs text-neutral-500">Krista Singleton</div>
             </div>
-            <span className="ml-auto text-neutral-600 group-hover:text-emerald-400 transition-colors text-sm">
-              ↗
+            <span className="ml-auto text-neutral-600 group-hover:text-emerald-400 transition-colors">
+              <ExternalLinkIcon />
             </span>
           </a>
         </div>

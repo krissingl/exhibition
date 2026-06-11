@@ -18,7 +18,7 @@ export default function Navbar() {
             <li key={href}>
               <a
                 href={href}
-                className="text-sm text-neutral-400 hover:text-neutral-100 transition-colors duration-150"
+                className="text-sm text-neutral-400 hover:text-emerald-400 transition-colors duration-150"
               >
                 {label}
               </a>
