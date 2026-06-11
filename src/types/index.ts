@@ -11,7 +11,6 @@ export interface Profile {
   name: string
   title: string
   bio: string
-  email: string
   githubUrl: string
   linkedinUrl: string
 }

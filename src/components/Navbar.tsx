@@ -1,3 +1,5 @@
+import { profile } from '../data/profile'
+
 const links = [
   { label: 'About', href: '#hero' },
   { label: 'Projects', href: '#projects' },
@@ -8,8 +10,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-800">
       <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        <a href="#hero" className="font-mono text-emerald-400 font-semibold tracking-tight text-sm">
-          exhibition
+        <a href="#hero" className="font-semibold text-neutral-100 hover:text-emerald-400 transition-colors tracking-tight text-sm">
+          {profile.name}
         </a>
         <ul className="flex gap-6">
           {links.map(({ label, href }) => (
