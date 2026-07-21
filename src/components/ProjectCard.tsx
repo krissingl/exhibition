@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
         </span>
       </div>
 
-      <p className="text-sm text-neutral-400 leading-relaxed">{project.description}</p>
+      <p className="text-sm text-neutral-400 leading-relaxed line-clamp-4">{project.description}</p>
 
       <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
         {project.techStack.map((tech) => (

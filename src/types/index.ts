@@ -3,10 +3,16 @@ export interface ProjectLink {
   url: string
 }
 
+export interface ProjectImage {
+  src: string
+  alt: string
+}
+
 export interface Project {
   name: string
   description: string
   techStack: string[]
+  images?: ProjectImage[]
   links?: [] | [ProjectLink] | [ProjectLink, ProjectLink]
   type: 'personal' | 'volunteer'
 }
