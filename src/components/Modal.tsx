@@ -16,7 +16,7 @@ export default function Modal({ project, onClose }: ModalProps) {
     return () => document.removeEventListener('keydown', handleKey)
   }, [onClose])
 
-  const hasLinks = project.repoUrl || project.liveUrl
+  const links = project.links ?? []
 
   return (
     <div
@@ -57,28 +57,23 @@ export default function Modal({ project, onClose }: ModalProps) {
           ))}
         </div>
 
-        {hasLinks && (
+        {links.length > 0 && (
           <div className="flex gap-3 pt-4 border-t border-neutral-800">
-            {project.repoUrl && (
+            {links.map((link, i) => (
               <a
-                href={project.repoUrl}
+                key={link.url}
+                href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded transition-colors"
+                className={
+                  i === 0
+                    ? 'px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded transition-colors'
+                    : 'px-4 py-2 border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 text-sm rounded transition-colors'
+                }
               >
-                View Repo ↗
+                {link.label} ↗
               </a>
-            )}
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 text-sm rounded transition-colors"
-              >
-                Live Site ↗
-              </a>
-            )}
+            ))}
           </div>
         )}
       </div>

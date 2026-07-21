@@ -1,9 +1,13 @@
+export interface ProjectLink {
+  label: string
+  url: string
+}
+
 export interface Project {
   name: string
   description: string
   techStack: string[]
-  repoUrl?: string
-  liveUrl?: string
+  links?: [] | [ProjectLink] | [ProjectLink, ProjectLink]
   type: 'personal' | 'volunteer'
 }
 
