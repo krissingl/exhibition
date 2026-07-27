@@ -38,12 +38,12 @@ export default function Contact() {
           Open to interesting opportunities. Find me on GitHub or LinkedIn.
         </p>
 
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
           <a
             href={profile.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 px-6 py-4 bg-neutral-900 border border-neutral-700 hover:border-emerald-700 rounded-lg transition-colors duration-150 group min-w-48"
+            className="flex items-center gap-4 px-6 py-4 bg-neutral-900 border border-neutral-700 hover:border-emerald-700 rounded-lg transition-colors duration-150 group w-full sm:w-auto sm:min-w-48"
           >
             <span className="text-neutral-400 group-hover:text-emerald-400 transition-colors">
               <GitHubIcon />
@@ -61,7 +61,7 @@ export default function Contact() {
             href={profile.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 px-6 py-4 bg-neutral-900 border border-neutral-700 hover:border-emerald-700 rounded-lg transition-colors duration-150 group min-w-48"
+            className="flex items-center gap-4 px-6 py-4 bg-neutral-900 border border-neutral-700 hover:border-emerald-700 rounded-lg transition-colors duration-150 group w-full sm:w-auto sm:min-w-48"
           >
             <span className="text-neutral-400 group-hover:text-emerald-400 transition-colors">
               <LinkedInIcon />
